@@ -21,7 +21,8 @@ Make sure you have `python 3.6` installed.
 - Run tests by doing `python tests.py`
 
 ## Using Docker
-- Run `docker-compose up`
+- Make sure your folder is being shared within Docker client (Preferences > Resources > File Sharing)
+- Run `docker-compose up --build`
 - In a new terminal or tab run:
     - `docker exec -it counterappmysql_web_1 flask db init` to initialize migrations
     - `docker exec -it counterappmysql_web_1 flask db migrate` and `docker exec -it counterappmysql_web_1 flask db upgrade` to create tables
